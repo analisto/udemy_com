@@ -1,4 +1,0 @@
-Model,Response_Time,CER,WER,CSR,WSR
-GPT-4.1,127.8,11.52,32.08,88.48,67.92
-Llama-4-Maverick-17B,80.22,11.7,35.28,88.3,64.72
-Phi-4-multimodal,666.44,65.48,112.9,34.52,0.0

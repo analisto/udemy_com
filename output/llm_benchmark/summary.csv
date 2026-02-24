@@ -1,4 +1,0 @@
-Model,Quality_Score,Similarity,Citation_Score,Completeness,Response_Time
-GPT-4.1,52.0,0.0,80.0,100.0,6.38
-Llama-4-Maverick,52.0,0.0,80.0,100.0,4.0
-DeepSeek-R1,32.27,1.54,33.33,91.6,10.98

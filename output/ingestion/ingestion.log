@@ -1,215 +1,0 @@
-AttributeError: 'MessageFactory' object has no attribute 'GetPrototype'
-AttributeError: 'MessageFactory' object has no attribute 'GetPrototype'
-AttributeError: 'MessageFactory' object has no attribute 'GetPrototype'
-AttributeError: 'MessageFactory' object has no attribute 'GetPrototype'
-AttributeError: 'MessageFactory' object has no attribute 'GetPrototype'
-🔄 Initializing clients...
-✅ Clients initialized
-
-======================================================================
-🚀 SOCAR PDF INGESTION PIPELINE
-======================================================================
-📂 PDF Directory: /Users/ismatsamadov/SOCAR_Hackathon/data/pdfs
-🎯 Vector Database: Pinecone (hackathon)
-🤖 OCR Model: Llama-4-Maverick-17B-128E-Instruct-FP8
-📊 Embedding Model: BAAI/bge-large-en-v1.5
-✂️  Chunking: 600 chars, 100 overlap
-======================================================================
-
-📚 Found 28 PDF files
-
-======================================================================
-📄 Processing: document_00.pdf
-======================================================================
-   Step 1/5: Running VLM OCR...
-   Extracting text from 12 pages...
-   OCR Progress:   0%|          | 0/12 [00:00<?, ?it/s]   OCR Progress:   8%|▊         | 1/12 [00:05<01:04,  5.85s/it]   OCR Progress:  17%|█▋        | 2/12 [00:11<00:55,  5.59s/it]   OCR Progress:  25%|██▌       | 3/12 [00:18<00:55,  6.22s/it]   OCR Progress:  33%|███▎      | 4/12 [00:25<00:52,  6.52s/it]   OCR Progress:  42%|████▏     | 5/12 [00:32<00:46,  6.68s/it]   OCR Progress:  50%|█████     | 6/12 [00:39<00:40,  6.74s/it]   OCR Progress:  58%|█████▊    | 7/12 [00:45<00:33,  6.75s/it]   OCR Progress:  67%|██████▋   | 8/12 [00:52<00:27,  6.80s/it]   OCR Progress:  75%|███████▌  | 9/12 [00:59<00:20,  6.78s/it]   OCR Progress:  83%|████████▎ | 10/12 [01:05<00:13,  6.52s/it]   OCR Progress:  92%|█████████▏| 11/12 [01:10<00:06,  6.02s/it]   OCR Progress: 100%|██████████| 12/12 [01:14<00:00,  5.40s/it]   OCR Progress: 100%|██████████| 12/12 [01:14<00:00,  6.19s/it]
-   ✅ OCR complete: 21998 characters (75.9s)
-   Step 2/5: Cleaning text...
-   ✅ Cleaned: 21998 characters
-   Step 3/5: Chunking text...
-   ✅ Created 45 chunks
-   Step 4/5: Generating embeddings...
-Batches:   0%|          | 0/2 [00:00<?, ?it/s]Batches:  50%|█████     | 1/2 [00:03<00:03,  3.83s/it]Batches: 100%|██████████| 2/2 [00:05<00:00,  2.43s/it]Batches: 100%|██████████| 2/2 [00:05<00:00,  2.64s/it]
-   ✅ Embeddings generated (5.3s)
-   Step 5/5: Upserting to Pinecone...
-   ✅ Upserted 45 vectors (3.6s)
-
-   🎉 Complete: document_00.pdf
-   📊 Total time: 84.8s
-   📊 Breakdown: OCR=75.9s, Embed=5.3s, Upload=3.6s
-
-======================================================================
-📄 Processing: document_01.pdf
-======================================================================
-   Step 1/5: Running VLM OCR...
-   Extracting text from 13 pages...
-   OCR Progress:   0%|          | 0/13 [00:00<?, ?it/s]   OCR Progress:   8%|▊         | 1/13 [00:02<00:32,  2.68s/it]   OCR Progress:  15%|█▌        | 2/13 [00:08<00:49,  4.54s/it]   OCR Progress:  23%|██▎       | 3/13 [00:13<00:48,  4.90s/it]   OCR Progress:  31%|███       | 4/13 [00:18<00:41,  4.66s/it]   OCR Progress:  38%|███▊      | 5/13 [00:23<00:39,  4.90s/it]   OCR Progress:  46%|████▌     | 6/13 [00:29<00:36,  5.19s/it]   OCR Progress:  54%|█████▍    | 7/13 [00:35<00:34,  5.70s/it]   OCR Progress:  62%|██████▏   | 8/13 [00:41<00:28,  5.61s/it]   OCR Progress:  69%|██████▉   | 9/13 [00:45<00:21,  5.27s/it]   OCR Progress:  77%|███████▋  | 10/13 [00:50<00:15,  5.13s/it]   OCR Progress:  85%|████████▍ | 11/13 [00:56<00:10,  5.22s/it]   OCR Progress:  92%|█████████▏| 12/13 [01:01<00:05,  5.31s/it]   OCR Progress: 100%|██████████| 13/13 [01:07<00:00,  5.41s/it]   OCR Progress: 100%|██████████| 13/13 [01:07<00:00,  5.18s/it]
-   ✅ OCR complete: 18280 characters (69.1s)
-   Step 2/5: Cleaning text...
-   ✅ Cleaned: 18278 characters
-   Step 3/5: Chunking text...
-   ✅ Created 37 chunks
-   Step 4/5: Generating embeddings...
-Batches:   0%|          | 0/2 [00:00<?, ?it/s]Batches:  50%|█████     | 1/2 [00:03<00:03,  3.72s/it]Batches: 100%|██████████| 2/2 [00:04<00:00,  1.93s/it]Batches: 100%|██████████| 2/2 [00:04<00:00,  2.20s/it]
-   ✅ Embeddings generated (4.4s)
-   Step 5/5: Upserting to Pinecone...
-   ✅ Upserted 37 vectors (2.0s)
-
-   🎉 Complete: document_01.pdf
-   📊 Total time: 75.5s
-   📊 Breakdown: OCR=69.1s, Embed=4.4s, Upload=2.0s
-
-======================================================================
-📄 Processing: document_02.pdf
-======================================================================
-   Step 1/5: Running VLM OCR...
-   Extracting text from 11 pages...
-   OCR Progress:   0%|          | 0/11 [00:00<?, ?it/s]   OCR Progress:   9%|▉         | 1/11 [00:07<01:13,  7.35s/it]   OCR Progress:  18%|█▊        | 2/11 [00:12<00:57,  6.34s/it]   OCR Progress:  27%|██▋       | 3/11 [00:18<00:47,  5.92s/it]   OCR Progress:  36%|███▋      | 4/11 [00:24<00:40,  5.81s/it]   OCR Progress:  45%|████▌     | 5/11 [00:31<00:38,  6.49s/it]   OCR Progress:  55%|█████▍    | 6/11 [00:39<00:34,  6.97s/it]   OCR Progress:  64%|██████▎   | 7/11 [00:46<00:28,  7.00s/it]   OCR Progress:  73%|███████▎  | 8/11 [00:53<00:20,  6.85s/it]   OCR Progress:  82%|████████▏ | 9/11 [01:00<00:13,  6.89s/it]   OCR Progress:  91%|█████████ | 10/11 [01:06<00:06,  6.77s/it]   OCR Progress: 100%|██████████| 11/11 [01:09<00:00,  5.47s/it]   OCR Progress: 100%|██████████| 11/11 [01:09<00:00,  6.29s/it]
-   ✅ OCR complete: 20028 characters (70.7s)
-   Step 2/5: Cleaning text...
-   ✅ Cleaned: 20028 characters
-   Step 3/5: Chunking text...
-   ✅ Created 41 chunks
-   Step 4/5: Generating embeddings...
-Batches:   0%|          | 0/2 [00:00<?, ?it/s]Batches:  50%|█████     | 1/2 [00:03<00:03,  3.71s/it]Batches: 100%|██████████| 2/2 [00:04<00:00,  2.11s/it]Batches: 100%|██████████| 2/2 [00:04<00:00,  2.35s/it]
-   ✅ Embeddings generated (4.7s)
-   Step 5/5: Upserting to Pinecone...
-   ✅ Upserted 41 vectors (2.1s)
-
-   🎉 Complete: document_02.pdf
-   📊 Total time: 77.5s
-   📊 Breakdown: OCR=70.7s, Embed=4.7s, Upload=2.1s
-
-======================================================================
-📄 Processing: document_03.pdf
-======================================================================
-   Step 1/5: Running VLM OCR...
-   Extracting text from 9 pages...
-   OCR Progress:   0%|          | 0/9 [00:00<?, ?it/s]   OCR Progress:  11%|█         | 1/9 [00:07<01:02,  7.79s/it]   OCR Progress:  22%|██▏       | 2/9 [00:13<00:47,  6.83s/it]   OCR Progress:  33%|███▎      | 3/9 [00:20<00:39,  6.65s/it]   OCR Progress:  44%|████▍     | 4/9 [00:27<00:33,  6.65s/it]   OCR Progress:  56%|█████▌    | 5/9 [00:32<00:24,  6.14s/it]   OCR Progress:  67%|██████▋   | 6/9 [00:37<00:17,  5.93s/it]   OCR Progress:  78%|███████▊  | 7/9 [00:44<00:12,  6.16s/it]   OCR Progress:  89%|████████▉ | 8/9 [00:51<00:06,  6.36s/it]   OCR Progress: 100%|██████████| 9/9 [00:55<00:00,  5.81s/it]   OCR Progress: 100%|██████████| 9/9 [00:55<00:00,  6.20s/it]
-   ✅ OCR complete: 14720 characters (57.1s)
-   Step 2/5: Cleaning text...
-   ✅ Cleaned: 14720 characters
-   Step 3/5: Chunking text...
-   ✅ Created 30 chunks
-   Step 4/5: Generating embeddings...
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:03<00:00,  3.25s/it]Batches: 100%|██████████| 1/1 [00:03<00:00,  3.25s/it]
-   ✅ Embeddings generated (3.3s)
-   Step 5/5: Upserting to Pinecone...
-   ✅ Upserted 30 vectors (2.0s)
-
-   🎉 Complete: document_03.pdf
-   📊 Total time: 62.3s
-   📊 Breakdown: OCR=57.1s, Embed=3.3s, Upload=2.0s
-
-======================================================================
-📄 Processing: document_04.pdf
-======================================================================
-   Step 1/5: Running VLM OCR...
-   Extracting text from 8 pages...
-   OCR Progress:   0%|          | 0/8 [00:00<?, ?it/s]   OCR Progress:  12%|█▎        | 1/8 [00:07<00:55,  7.96s/it]   OCR Progress:  25%|██▌       | 2/8 [00:15<00:44,  7.43s/it]   OCR Progress:  38%|███▊      | 3/8 [00:22<00:36,  7.32s/it]   OCR Progress:  50%|█████     | 4/8 [00:29<00:29,  7.26s/it]   OCR Progress:  62%|██████▎   | 5/8 [00:36<00:21,  7.23s/it]   OCR Progress:  75%|███████▌  | 6/8 [00:42<00:13,  6.95s/it]   OCR Progress:  88%|████████▊ | 7/8 [00:47<00:06,  6.20s/it]   OCR Progress: 100%|██████████| 8/8 [00:53<00:00,  6.24s/it]   OCR Progress: 100%|██████████| 8/8 [00:53<00:00,  6.74s/it]
-   ✅ OCR complete: 14582 characters (55.0s)
-   Step 2/5: Cleaning text...
-   ✅ Cleaned: 14580 characters
-   Step 3/5: Chunking text...
-   ✅ Created 30 chunks
-   Step 4/5: Generating embeddings...
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:03<00:00,  3.34s/it]Batches: 100%|██████████| 1/1 [00:03<00:00,  3.34s/it]
-   ✅ Embeddings generated (3.3s)
-   Step 5/5: Upserting to Pinecone...
-   ✅ Upserted 30 vectors (0.6s)
-
-   🎉 Complete: document_04.pdf
-   📊 Total time: 59.0s
-   📊 Breakdown: OCR=55.0s, Embed=3.3s, Upload=0.6s
-
-======================================================================
-📄 Processing: document_05.pdf
-======================================================================
-   Step 1/5: Running VLM OCR...
-   Extracting text from 19 pages...
-   OCR Progress:   0%|          | 0/19 [00:00<?, ?it/s]   OCR Progress:   5%|▌         | 1/19 [00:06<01:50,  6.11s/it]   OCR Progress:  11%|█         | 2/19 [00:10<01:31,  5.37s/it]   OCR Progress:  16%|█▌        | 3/19 [00:15<01:18,  4.88s/it]   OCR Progress:  21%|██        | 4/19 [00:19<01:11,  4.80s/it]   OCR Progress:  26%|██▋       | 5/19 [00:25<01:09,  4.99s/it]   OCR Progress:  32%|███▏      | 6/19 [00:29<01:02,  4.81s/it]   OCR Progress:  37%|███▋      | 7/19 [00:35<00:59,  4.98s/it]   OCR Progress:  42%|████▏     | 8/19 [00:39<00:54,  4.93s/it]   OCR Progress:  47%|████▋     | 9/19 [00:43<00:46,  4.66s/it]   OCR Progress:  53%|█████▎    | 10/19 [00:48<00:40,  4.52s/it]   OCR Progress:  58%|█████▊    | 11/19 [00:53<00:37,  4.69s/it]   OCR Progress:  63%|██████▎   | 12/19 [00:57<00:32,  4.69s/it]   OCR Progress:  68%|██████▊   | 13/19 [01:03<00:29,  4.84s/it]   OCR Progress:  74%|███████▎  | 14/19 [01:08<00:24,  4.91s/it]   OCR Progress:  79%|███████▉  | 15/19 [01:12<00:19,  4.86s/it]   OCR Progress:  84%|████████▍ | 16/19 [01:16<00:13,  4.51s/it]   OCR Progress:  89%|████████▉ | 17/19 [01:19<00:08,  4.11s/it]   OCR Progress:  95%|█████████▍| 18/19 [01:24<00:04,  4.37s/it]   OCR Progress: 100%|██████████| 19/19 [01:27<00:00,  3.95s/it]   OCR Progress: 100%|██████████| 19/19 [01:27<00:00,  4.62s/it]
-   ✅ OCR complete: 23190 characters (90.3s)
-   Step 2/5: Cleaning text...
-   ✅ Cleaned: 23190 characters
-   Step 3/5: Chunking text...
-   ✅ Created 47 chunks
-   Step 4/5: Generating embeddings...
-Batches:   0%|          | 0/2 [00:00<?, ?it/s]Batches:  50%|█████     | 1/2 [00:03<00:03,  3.80s/it]Batches: 100%|██████████| 2/2 [00:05<00:00,  2.46s/it]Batches: 100%|██████████| 2/2 [00:05<00:00,  2.66s/it]
-   ✅ Embeddings generated (5.3s)
-   Step 5/5: Upserting to Pinecone...
-   ✅ Upserted 47 vectors (5.8s)
-
-   🎉 Complete: document_05.pdf
-   📊 Total time: 101.5s
-   📊 Breakdown: OCR=90.3s, Embed=5.3s, Upload=5.8s
-
-======================================================================
-📄 Processing: document_06.pdf
-======================================================================
-   Step 1/5: Running VLM OCR...
-   Extracting text from 10 pages...
-   OCR Progress:   0%|          | 0/10 [00:00<?, ?it/s]   OCR Progress:  10%|█         | 1/10 [00:07<01:07,  7.47s/it]   OCR Progress:  20%|██        | 2/10 [00:12<00:46,  5.87s/it]   OCR Progress:  30%|███       | 3/10 [00:16<00:37,  5.31s/it]   OCR Progress:  40%|████      | 4/10 [00:24<00:37,  6.30s/it]   OCR Progress:  50%|█████     | 5/10 [00:29<00:29,  5.89s/it]   OCR Progress:  60%|██████    | 6/10 [00:36<00:24,  6.06s/it]   OCR Progress:  70%|███████   | 7/10 [00:41<00:17,  5.74s/it]   OCR Progress:  80%|████████  | 8/10 [00:47<00:11,  5.84s/it]   OCR Progress:  90%|█████████ | 9/10 [00:53<00:05,  5.81s/it]   OCR Progress: 100%|██████████| 10/10 [00:58<00:00,  5.69s/it]   OCR Progress: 100%|██████████| 10/10 [00:58<00:00,  5.85s/it]
-   ✅ OCR complete: 15377 characters (59.9s)
-   Step 2/5: Cleaning text...
-   ✅ Cleaned: 15377 characters
-   Step 3/5: Chunking text...
-   ✅ Created 31 chunks
-   Step 4/5: Generating embeddings...
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:04<00:00,  4.10s/it]Batches: 100%|██████████| 1/1 [00:04<00:00,  4.10s/it]
-   ✅ Embeddings generated (4.1s)
-   Step 5/5: Upserting to Pinecone...
-   ✅ Upserted 31 vectors (2.0s)
-
-   🎉 Complete: document_06.pdf
-   📊 Total time: 66.0s
-   📊 Breakdown: OCR=59.9s, Embed=4.1s, Upload=2.0s
-
-======================================================================
-📄 Processing: document_07.pdf
-======================================================================
-   Step 1/5: Running VLM OCR...
-   Extracting text from 9 pages...
-   OCR Progress:   0%|          | 0/9 [00:00<?, ?it/s]   OCR Progress:  11%|█         | 1/9 [00:07<00:58,  7.35s/it]   OCR Progress:  22%|██▏       | 2/9 [00:14<00:50,  7.18s/it]   OCR Progress:  33%|███▎      | 3/9 [00:21<00:43,  7.28s/it]   OCR Progress:  44%|████▍     | 4/9 [00:29<00:38,  7.62s/it]   OCR Progress:  56%|█████▌    | 5/9 [00:36<00:29,  7.32s/it]   OCR Progress:  67%|██████▋   | 6/9 [00:43<00:21,  7.07s/it]   OCR Progress:  78%|███████▊  | 7/9 [00:50<00:14,  7.04s/it]   OCR Progress:  89%|████████▉ | 8/9 [00:57<00:07,  7.12s/it]   OCR Progress: 100%|██████████| 9/9 [01:04<00:00,  7.00s/it]   OCR Progress: 100%|██████████| 9/9 [01:04<00:00,  7.15s/it]
-   ✅ OCR complete: 19156 characters (65.6s)
-   Step 2/5: Cleaning text...
-   ✅ Cleaned: 19156 characters
-   Step 3/5: Chunking text...
-   ✅ Created 39 chunks
-   Step 4/5: Generating embeddings...
-Batches:   0%|          | 0/2 [00:00<?, ?it/s]Batches:  50%|█████     | 1/2 [00:04<00:04,  4.01s/it]Batches: 100%|██████████| 2/2 [00:04<00:00,  2.16s/it]Batches: 100%|██████████| 2/2 [00:04<00:00,  2.44s/it]
-   ✅ Embeddings generated (4.9s)
-   Step 5/5: Upserting to Pinecone...
-   ✅ Upserted 39 vectors (2.0s)
-
-   🎉 Complete: document_07.pdf
-   📊 Total time: 72.5s
-   📊 Breakdown: OCR=65.6s, Embed=4.9s, Upload=2.0s
-
-======================================================================
-📄 Processing: document_08.pdf
-======================================================================
-   Step 1/5: Running VLM OCR...
-   Extracting text from 19 pages...
-   OCR Progress:   0%|          | 0/19 [00:00<?, ?it/s]   OCR Progress:   5%|▌         | 1/19 [00:02<00:48,  2.68s/it]   OCR Progress:  11%|█         | 2/19 [00:09<01:27,  5.17s/it]   OCR Progress:  16%|█▌        | 3/19 [00:13<01:16,  4.77s/it]   OCR Progress:  21%|██        | 4/19 [00:18<01:12,  4.83s/it]   OCR Progress:  26%|██▋       | 5/19 [00:22<01:04,  4.60s/it]   OCR Progress:  32%|███▏      | 6/19 [00:26<00:55,  4.25s/it]   OCR Progress:  37%|███▋      | 7/19 [00:30<00:49,  4.14s/it]   OCR Progress:  42%|████▏     | 8/19 [00:35<00:50,  4.55s/it]   OCR Progress:  47%|████▋     | 9/19 [00:40<00:47,  4.71s/it]   OCR Progress:  53%|█████▎    | 10/19 [00:44<00:38,  4.29s/it]   OCR Progress:  58%|█████▊    | 11/19 [00:48<00:33,  4.17s/it]   OCR Progress:  63%|██████▎   | 12/19 [00:53<00:31,  4.49s/it]   OCR Progress:  68%|██████▊   | 13/19 [00:56<00:24,  4.07s/it]   OCR Progress:  74%|███████▎  | 14/19 [01:01<00:21,  4.30s/it]   OCR Progress:  79%|███████▉  | 15/19 [01:05<00:16,  4.22s/it]   OCR Progress:  84%|████████▍ | 16/19 [01:10<00:13,  4.37s/it]   OCR Progress:  89%|████████▉ | 17/19 [01:13<00:08,  4.02s/it]   OCR Progress:  95%|█████████▍| 18/19 [01:18<00:04,  4.25s/it]   OCR Progress: 100%|██████████| 19/19 [01:24<00:00,  5.03s/it]   OCR Progress: 100%|██████████| 19/19 [01:24<00:00,  4.47s/it]
-   ✅ OCR complete: 21858 characters (87.5s)
-   Step 2/5: Cleaning text...
-   ✅ Cleaned: 21858 characters
-   Step 3/5: Chunking text...
-   ✅ Created 44 chunks
-   Step 4/5: Generating embeddings...
-Batches:   0%|          | 0/2 [00:00<?, ?it/s]Batches:  50%|█████     | 1/2 [00:03<00:03,  3.83s/it]Batches: 100%|██████████| 2/2 [00:05<00:00,  2.36s/it]Batches: 100%|██████████| 2/2 [00:05<00:00,  2.58s/it]
-   ✅ Embeddings generated (5.2s)
-   Step 5/5: Upserting to Pinecone...
-   ✅ Upserted 44 vectors (2.7s)
-
-   🎉 Complete: document_08.pdf
-   📊 Total time: 95.4s
-   📊 Breakdown: OCR=87.5s, Embed=5.2s, Upload=2.7s
-
-======================================================================
-📄 Processing: document_09.pdf
-======================================================================
-   Step 1/5: Running VLM OCR...
-   Extracting text from 13 pages...
-   OCR Progress:   0%|          | 0/13 [00:00<?, ?it/s]   OCR Progress:   8%|▊         | 1/13 [00:03<00:41,  3.47s/it]   OCR Progress:  15%|█▌        | 2/13 [00:10<01:02,  5.70s/it]   OCR Progress:  23%|██▎       | 3/13 [00:16<00:56,  5.66s/it]   OCR Progress:  31%|███       | 4/13 [00:20<00:45,  5.07s/it]   OCR Progress:  38%|███▊      | 5/13 [00:24<00:37,  4.73s/it]

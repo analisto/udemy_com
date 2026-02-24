@@ -1,8 +1,0 @@
-Config,LLM_Judge_Score,Accuracy,Citation_Score,Completeness,Response_Time
-bge-large-en_vanilla_k3_Llama-4-Maverick_citation_focused,55.67,0.0,73.33,100.0,3.61
-bge-large-en_vanilla_k3_Llama-4-Maverick_few_shot,45.7,4.86,40.0,100.0,2.17
-bge-large-en_vanilla_k3_Llama-4-Maverick_baseline,39.65,7.57,20.0,100.0,2.28
-bge-large-en_reranked_k3_Llama-4-Maverick_baseline,37.31,7.57,13.33,100.0,3.02
-bge-large-en_vanilla_k5_Llama-4-Maverick_baseline,35.6,0.0,16.0,100.0,3.38
-bge-large-en_mmr_balanced_Llama-4-Maverick_baseline,34.6,6.49,6.67,100.0,2.53
-multilingual-e5-large_vanilla_k3_Llama-4-Maverick_baseline,30.0,0.0,0.0,100.0,2.96

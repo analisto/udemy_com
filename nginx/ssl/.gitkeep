@@ -1,8 +1,0 @@
-# SSL certificates directory
-# Place your SSL certificates here:
-# - fullchain.pem: Your full certificate chain
-# - privkey.pem: Your private key
-#
-# See docs/markdowns/SSL_CAA_SETUP.md for setup instructions
-#
-# IMPORTANT: Never commit actual certificate files to git!
