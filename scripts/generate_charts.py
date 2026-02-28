@@ -87,7 +87,7 @@ LANG_NAMES = {
     "HI": "Hindi",      "KO": "Korean",     "RU": "Russian",
     "ID": "Indonesian", "ZH": "Chinese",    "PL": "Polish",
     "VI": "Vietnamese", "NL": "Dutch",      "TH": "Thai",
-    "UK": "Ukrainian",  "RO": "Romanian",
+    "UK": "Ukrainian",  "RO": "Romanian",  "TA": "Tamil",
 }
 df["language_name"] = df["language"].map(LANG_NAMES).fillna(df["language"])
 
@@ -157,8 +157,8 @@ ax.set_title("Platform Growth — Courses Updated Each Year")
 ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x/1000:.0f}K"))
 ax.annotate(
     "2025 was the biggest year on record — 2× the activity of 2024",
-    xy=(0.97, 0.92), xycoords="axes fraction",
-    ha="right", fontsize=10, color=C["dark"],
+    xy=(0.03, 0.92), xycoords="axes fraction",
+    ha="left", fontsize=10, color=C["dark"],
     bbox=dict(boxstyle="round,pad=0.4", fc="#f0fdf4", ec=C["green"], lw=1),
 )
 fig.tight_layout()
@@ -218,8 +218,8 @@ ax.set_title("Rating Quality Distribution — Platform Quality Benchmark")
 ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x/1000:.0f}K"))
 ax.annotate(
     f"Median rating: {rated['rating_average'].median():.2f} / 5.0  •  87% of rated courses score 4.0+",
-    xy=(0.97, 0.92), xycoords="axes fraction",
-    ha="right", fontsize=10, color=C["dark"],
+    xy=(0.03, 0.92), xycoords="axes fraction",
+    ha="left", fontsize=10, color=C["dark"],
     bbox=dict(boxstyle="round,pad=0.4", fc="#f0fdf4", ec=C["green"], lw=1),
 )
 fig.tight_layout()
@@ -284,7 +284,7 @@ ax.set_xticks(x)
 ax.set_xticklabels(level_labels)
 ax.set_ylabel("Number of Courses")
 ax.set_title("Free vs Paid Courses by Difficulty Level")
-ax.legend(loc="upper right", framealpha=0.9)
+ax.legend(loc="upper left", framealpha=0.9)
 ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x/1000:.0f}K"))
 
 # Annotate free % per level
@@ -298,7 +298,7 @@ for i, (paid, free) in enumerate(zip(paid_counts.values, free_counts.values)):
 ax.annotate(
     "Beginner courses have the highest free-to-paid ratio (15% free)\n"
     "Expert-level content is almost entirely behind a paywall",
-    xy=(0.97, 0.92), xycoords="axes fraction",
+    xy=(0.97, 0.68), xycoords="axes fraction",
     ha="right", fontsize=10, color=C["dark"],
     bbox=dict(boxstyle="round,pad=0.4", fc="#eff6ff", ec=C["blue"], lw=1),
 )
@@ -322,9 +322,12 @@ top_instructors = (
       .sort_values()
 )
 
-# Truncate long names so labels stay readable
+# Truncate long names and strip characters that DejaVu Sans can't render (e.g. CJK)
 def trunc(name, n=38):
-    return name[:n] + "…" if len(name) > n else name
+    clean = "".join(c for c in name if ord(c) < 256).strip()
+    if not clean:
+        clean = name  # fallback: keep original if fully non-ASCII
+    return clean[:n] + "…" if len(clean) > n else clean
 
 top_instructors.index = [trunc(n) for n in top_instructors.index]
 
@@ -379,8 +382,8 @@ ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x/1000:.0f}K"
 median_h = df["duration_hours"].median()
 ax.annotate(
     f"Median course length: {median_h:.1f} hours\n"
-    f"Standard (3–10h) courses are the most popular format",
-    xy=(0.97, 0.92), xycoords="axes fraction",
+    f"Short (1-3h) courses are the most common format",
+    xy=(0.97, 0.35), xycoords="axes fraction",
     ha="right", fontsize=10, color=C["dark"],
     bbox=dict(boxstyle="round,pad=0.4", fc="#eff6ff", ec=C["blue"], lw=1),
 )
@@ -447,13 +450,13 @@ for bar in bars:
 
 ax.set_xlabel("Average Rating (out of 5.0)")
 ax.set_title("Average Course Rating by Language Market")
-ax.set_xlim(3.8, lang_rating["avg_rating"].max() + 0.12)
+ax.set_xlim(3.8, lang_rating["avg_rating"].max() + 0.28)
 ax.axvline(x=lang_rating["avg_rating"].mean(), color=C["red"],
            linestyle="--", linewidth=1.5, label=f"Overall avg ({lang_rating['avg_rating'].mean():.2f})")
 ax.legend(loc="lower right")
 ax.annotate(
     "Rating differences are narrow — quality is uniformly high across all language markets",
-    xy=(0.97, 0.08), xycoords="axes fraction",
+    xy=(0.97, 0.92), xycoords="axes fraction",
     ha="right", fontsize=10, color=C["dark"],
     bbox=dict(boxstyle="round,pad=0.4", fc="#f0fdf4", ec=C["green"], lw=1),
 )
@@ -490,8 +493,8 @@ ax.axvline(x=90.1, color=C["red"], linestyle="--", linewidth=1.5,
 ax.legend(loc="lower right")
 ax.annotate(
     "Most markets are highly monetized (90%+)\nSome non-English markets have higher free course ratios",
-    xy=(0.97, 0.08), xycoords="axes fraction",
-    ha="right", fontsize=10, color=C["dark"],
+    xy=(0.03, 0.92), xycoords="axes fraction",
+    ha="left", fontsize=10, color=C["dark"],
     bbox=dict(boxstyle="round,pad=0.4", fc="#fff7ed", ec=C["amber"], lw=1),
 )
 fig.tight_layout()
@@ -530,10 +533,10 @@ ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x/1000:.0f}K"
 recent = freshness[freshness.index >= 2024].sum()
 recent_pct = recent / len(df) * 100
 ax.annotate(
-    f"{recent_pct:.0f}% of the catalog was updated in 2024 or 2025–26\n"
+    f"{recent_pct:.0f}% of the catalog was updated in 2024 or 2025-26\n"
     f"indicating an actively maintained, current content library",
-    xy=(0.97, 0.92), xycoords="axes fraction",
-    ha="right", fontsize=10, color=C["dark"],
+    xy=(0.03, 0.92), xycoords="axes fraction",
+    ha="left", fontsize=10, color=C["dark"],
     bbox=dict(boxstyle="round,pad=0.4", fc="#eff6ff", ec=C["blue"], lw=1),
 )
 fig.tight_layout()
