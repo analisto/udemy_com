@@ -1,8 +1,8 @@
 # Udemy Course Market Analysis
 ### Business Intelligence Report — February 2026
 
-**Data source:** [Udemy Courses Dataset on Kaggle](https://www.kaggle.com/datasets/ismetsemedov/udemy-courses)
-**Dataset:** 314,437 unique courses · 82,355 instructors · 88 languages
+- **Data source:** [Udemy Courses Dataset on Kaggle](https://www.kaggle.com/datasets/ismetsemedov/udemy-courses)
+- **Dataset:** 314,437 unique courses · 82,355 instructors · 88 languages
 
 ---
 
