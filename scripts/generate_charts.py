@@ -383,7 +383,7 @@ median_h = df["duration_hours"].median()
 ax.annotate(
     f"Median course length: {median_h:.1f} hours\n"
     f"Short (1-3h) courses are the most common format",
-    xy=(0.97, 0.35), xycoords="axes fraction",
+    xy=(0.97, 0.55), xycoords="axes fraction",
     ha="right", fontsize=10, color=C["dark"],
     bbox=dict(boxstyle="round,pad=0.4", fc="#eff6ff", ec=C["blue"], lw=1),
 )
@@ -456,7 +456,7 @@ ax.axvline(x=lang_rating["avg_rating"].mean(), color=C["red"],
 ax.legend(loc="lower right")
 ax.annotate(
     "Rating differences are narrow — quality is uniformly high across all language markets",
-    xy=(0.97, 0.92), xycoords="axes fraction",
+    xy=(0.97, 0.40), xycoords="axes fraction",
     ha="right", fontsize=10, color=C["dark"],
     bbox=dict(boxstyle="round,pad=0.4", fc="#f0fdf4", ec=C["green"], lw=1),
 )
