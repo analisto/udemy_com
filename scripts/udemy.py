@@ -394,6 +394,8 @@ async def main(resume: bool = False) -> None:
 
                 kw_new = 0
                 for result in results_p1:
+                    if result is None:
+                        continue
                     cid = result.get("course", {}).get("id")
                     if cid and cid not in seen_ids:
                         seen_ids.add(cid)
@@ -425,6 +427,8 @@ async def main(resume: bool = False) -> None:
                         if resp_data is None:
                             continue
                         for result in (extract_cs(resp_data).get("results") or []):
+                            if result is None:
+                                continue
                             cid = result.get("course", {}).get("id")
                             if cid and cid not in seen_ids:
                                 seen_ids.add(cid)
