@@ -159,5 +159,5 @@ Only 17% of courses have a badge. Achieving "Highest Rated" or "Bestseller" stat
 
 ---
 
-*Analysis based on 314,437 courses scraped from the Udemy platform in February 2026.*
-*Dataset available on Kaggle: [https://www.kaggle.com/datasets/ismetsemedov/udemy-courses](https://www.kaggle.com/datasets/ismetsemedov/udemy-courses)*
+- *Analysis based on 314,437 courses scraped from the Udemy platform in February 2026.
+- *Dataset available on Kaggle: [https://www.kaggle.com/datasets/ismetsemedov/udemy-courses](https://www.kaggle.com/datasets/ismetsemedov/udemy-courses)*
