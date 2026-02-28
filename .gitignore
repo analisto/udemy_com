@@ -1,3 +1,11 @@
 .claude
 __pycache__
 *.pyc
+
+# Credentials — never commit
+cookies.json
+
+# Large data files — store outside git (S3, Drive, etc.)
+data/*.csv
+data/*.log
+data/progress.json
